@@ -7,6 +7,8 @@
 - _**High-level**_ modules should not depend on _**low-level**_ modules. Both should depend on _**abstractions**_ 
 - _**Abstractions**_ should not depend on _**concrete implementations**_. _**Concrete implementations**_ should depend on _**abstractions**_.
 
+---
+
 #### Example
 
 ```java
@@ -30,6 +32,8 @@
 ```
 In this case our class(High-level module) depends directly on `StdLogger` implementation(Low-level module) and if we want log on a file for instance we must 
 change the code inside `MyClass`.
+
+---
 
 Solution:
 - Introduce `Logger` interface 
