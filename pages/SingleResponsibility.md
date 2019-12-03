@@ -1,0 +1,1 @@
+# (S)ingle Responsibility
