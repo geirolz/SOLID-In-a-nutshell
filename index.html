@@ -10,16 +10,15 @@
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-
-        $.when(...loads([
-                "README.md",
-                "./pages/SingleResponsibility.md",
-                "./pages/OpenClosed.md",
-                "./pages/LiskovSubstitution.md",
-                "./pages/InterfaceSegregation.md",
-                "./pages/DependencyInversion.md"
-            ])
-        ).then(function(){
+        $.when(loads([
+            "README.md",
+            "./pages/SingleResponsibility.md",
+            "./pages/OpenClosed.md",
+            "./pages/LiskovSubstitution.md",
+            "./pages/InterfaceSegregation.md",
+            "./pages/DependencyInversion.md"
+        ])).then(function(data){
+            $("#source").html(data).show();
             remark.create({
                 highlightStyle: 'monokai',
                 highlightLanguage: 'remark',
@@ -27,18 +26,29 @@
             });
         });
 
-        function loads(paths) {
-            return $.map(paths, function (path, idx) {
-                return $.get(path, function(data) {
-                    let $source = $("#source");
-                    var end = idx < paths.length - 1 ? "\n---\n" : "";
-                    $source.html($source.html() + data + end)
-                }, "text");
-            });
+        function loads(paths, status = "") {
+            let deferred = $.Deferred();
+
+            if(paths.length <= 0) {
+                deferred.resolve("");
+            } else {
+                $.get(paths[0], function (data) {
+                    let hasNext = paths.length > 1;
+                    let end = hasNext ? "\n---\n" : "";
+                    let newStatus = status + data + end;
+
+                    if (hasNext) {
+                        return deferred.resolve(loads(paths.splice(1), newStatus));
+                    } else {
+                        return deferred.resolve(newStatus);
+                    }
+                }, "html");
+            }
+            return deferred.promise();
         }
     </script>
 </head>
 <body>
-<textarea id="source"></textarea>
+<textarea style="display: none" id="source"></textarea>
 </body>
 </html>
