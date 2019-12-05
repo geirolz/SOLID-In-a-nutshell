@@ -10,13 +10,14 @@
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        let srcPath = "src/main/java/com/github/geirolz/solid";
         $.when(loads([
             "README.md",
-            "./docs/SingleResponsibility.md",
-            "./docs/OpenClosed.md",
-            "./docs/LiskovSubstitution.md",
-            "./docs/InterfaceSegregation.md",
-            "./docs/DependencyInversion.md"
+            srcPath + "/srp/SingleResponsibility.md",
+            srcPath + "/ocp/OpenClosed.md",
+            srcPath + "/lsp/LiskovSubstitution.md",
+            srcPath + "/isp/InterfaceSegregation.md",
+            srcPath + "/dip/DependencyInversion.md"
         ])).then(function(data){
             $("#source").html(data).show();
             remark.create({

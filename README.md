@@ -1,7 +1,7 @@
 # SOLID principles in a nutshell
 
-- [(S)ingle Responsibility](docs/SingleResponsibility.md)
-- [(O)pen/Closed](docs/OpenClosed.md)
-- [(L)iskov Substitution](docs/LiskovSubstitution.md)
-- [(I)nterfaces Segregation](docs/InterfaceSegregation.md)
-- [(D)ependency Inversion](docs/DependencyInversion.md)
+- [(S)ingle Responsibility](src/main/java/com/github/geirolz/solid/srp/SingleResponsibility.md)
+- [(O)pen/Closed](src/main/java/com/github/geirolz/solid/ocp/OpenClosed.md)
+- [(L)iskov Substitution](src/main/java/com/github/geirolz/solid/lsp/LiskovSubstitution.md)
+- [(I)nterfaces Segregation](src/main/java/com/github/geirolz/solid/isp/InterfaceSegregation.md)
+- [(D)ependency Inversion](src/main/java/com/github/geirolz/solid/dip/DependencyInversion.md)
