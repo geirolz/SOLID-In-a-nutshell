@@ -105,3 +105,11 @@ code {
     float: right;
     padding-top: 1em;
 }
+
+.notebox {
+    padding: 10px;
+    font-style: italic;
+    background-color: rgba(255, 255, 204, 0.79);
+    text-align: center;
+    /*border-left: 6px solid rgba(255, 234, 63, 0.6);*/
+}
