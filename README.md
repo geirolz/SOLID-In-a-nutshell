@@ -1,7 +1,7 @@
 # SOLID principles in a nutshell
 
-- [(S)ingle Responsibility](pages/SingleResponsibility.md)
-- [(O)pen/Closed](pages/OpenClosed.md)
-- [(L)iskov Substitution](pages/LiskovSubstitution.md)
-- [(I)nterfaces Segregation](pages/InterfaceSegregation.md)
-- [(D)ependency Inversion](pages/DependencyInversion.md)
+- [(S)ingle Responsibility](docs/SingleResponsibility.md)
+- [(O)pen/Closed](docs/OpenClosed.md)
+- [(L)iskov Substitution](docs/LiskovSubstitution.md)
+- [(I)nterfaces Segregation](docs/InterfaceSegregation.md)
+- [(D)ependency Inversion](docs/DependencyInversion.md)

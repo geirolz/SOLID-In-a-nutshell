@@ -5,18 +5,18 @@
     <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
     <title>Remark</title>
-    <link rel="stylesheet" href="resources/style.css">
+    <link rel="stylesheet" href="src/main/resources/style.css">
 
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $.when(loads([
             "README.md",
-            "./pages/SingleResponsibility.md",
-            "./pages/OpenClosed.md",
-            "./pages/LiskovSubstitution.md",
-            "./pages/InterfaceSegregation.md",
-            "./pages/DependencyInversion.md"
+            "./docs/SingleResponsibility.md",
+            "./docs/OpenClosed.md",
+            "./docs/LiskovSubstitution.md",
+            "./docs/InterfaceSegregation.md",
+            "./docs/DependencyInversion.md"
         ])).then(function(data){
             $("#source").html(data).show();
             remark.create({
