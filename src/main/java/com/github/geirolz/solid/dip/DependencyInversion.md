@@ -23,14 +23,7 @@ Obviusly we need concretions but:
 
 <div class="notebox">EASY IS BETTER<br>DO NOT CREATE ABSTRACTION WHERE IS NOT NEEDED</div>
 
-
-#### Example 
-- **String** class is **Stable**
-- **DatabaseConnector** class is **Volatile**
-
-
 ---
-
 #### Example
 
 ```java
@@ -56,7 +49,6 @@ In this case our class(High-level module) depends directly on `StdLogger` implem
 change the code inside `MyClass`.
 
 ---
-
 Solution:
 - Introduce `Logger` interface 
 - Create a constructor in `MyClass` and lets the decision of which logger use to who use `MyClass` 
