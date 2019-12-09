@@ -14,8 +14,7 @@ reason to change.
 * module: the simplest definition is just a source file, or, more generally, a cohesive set of functions and data structures.
 
 ---
-
-# A typical example:
+## A typical example:
 
 ```java
     class Employee {
@@ -32,7 +31,7 @@ This class violates the SRP because those three methods are responsible to three
 
 ---
 
-# SYMPTOM 1: ACCIDENTAL DUPLICATION
+## SYMPTOM 1: ACCIDENTAL DUPLICATION
 
 ```java
     class Employee {
@@ -56,7 +55,7 @@ the `reportHours()` function?
 
 ---
 
-# SYMPTOM 2: MERGES
+## SYMPTOM 2: MERGES
 
 Suppose that:
 * the CTO’s team of DBAs decides that there should be a simple schema change to the Employee table of the 
@@ -72,7 +71,7 @@ Unfortunately their changes collide. The result is a merge (*a risky affair*).
 
 ---
 
-# SOLUTION
+## SOLUTION
 
 Key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**
 
