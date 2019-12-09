@@ -87,4 +87,13 @@ Now `workHours()` and `eat()` methods have been split into two separated interfa
 ```
 
 
+---
+## Exercise
+Look at `com.github.geirolz.solid.isp.exercise` package and then:
+- **Refactor** `com.github.geirolz.solid.isp.exercise.PaymentService` in order to respect the ISP.
+
+#### Hints
+- _Fine-grained interfaces_
+- _No exceptions_
+
  
