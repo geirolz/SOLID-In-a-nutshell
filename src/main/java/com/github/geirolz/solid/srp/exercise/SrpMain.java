@@ -1,4 +1,4 @@
-package com.github.geirolz.solid.srp;
+package com.github.geirolz.solid.srp.exercise;
 
 import java.math.BigDecimal;
 

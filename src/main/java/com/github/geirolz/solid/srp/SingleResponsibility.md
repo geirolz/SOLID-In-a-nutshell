@@ -106,8 +106,8 @@ Key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**
 
 ## Exercise
 Look at `com.github.geirolz.solid.srp` package and then:
-* refactor `com.github.geirolz.solid.srp.Order` in order to respect the SRP.
-* execute the `com.github.geirolz.solid.srp.SrpMain` class to check the outputs.
+* refactor `com.github.geirolz.solid.srp.exercise.Order` in order to respect the SRP.
+* execute the `com.github.geirolz.solid.srp.exercise.SrpMain` class to check the outputs.
 
 *Hints:*
 Remember the key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**
