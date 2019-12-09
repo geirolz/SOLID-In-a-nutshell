@@ -1,18 +1,19 @@
-package com.github.geirolz.solid.srp;
+package com.github.geirolz.solid.srp.solution;
 
 import java.math.BigDecimal;
 
 public class SrpMain {
     private static final ShippingService shippingService = new ShippingServiceImpl();
-    private static final Order order1 = sample1(shippingService);
-    private static final Order order2 = sample2(shippingService);
+    private static final ShippingManager shippingManager = new ShippingManager(shippingService);
+    private static final Order order1 = sample1();
+    private static final Order order2 = sample2();
 
     public static void main(String[] args) {
-        System.out.println(order1.printOrder());
-        System.out.println(order2.printOrder());
+        System.out.println(OrderPrinter.printOrder(order1));
+        System.out.println(OrderPrinter.printOrder(order2));
 
-        System.out.println(order1.shipOrder());
-        System.out.println(order2.shipOrder());
+        System.out.println(shippingManager.shipOrder(order1));
+        System.out.println(shippingManager.shipOrder(order2));
     }
 
     private static class ShippingServiceImpl implements ShippingService {
@@ -22,25 +23,23 @@ public class SrpMain {
         }
     }
 
-    private static Order sample1(ShippingService shippingService) {
+    private static Order sample1() {
         return new Order("order1",
                 "Andrea",
                 "Via ... 1",
                 "Rossi",
                 "IT",
                 new BigDecimal(100),
-                OrderStatus.CREATED,
-                shippingService);
+                OrderStatus.CREATED);
     }
 
-    private static Order sample2(ShippingService shippingService) {
+    private static Order sample2() {
         return new Order("order2",
                 "Luca",
                 "Via ... 5",
                 "Bianchi",
                 "UK",
                 new BigDecimal(130),
-                OrderStatus.CANCELLED,
-                shippingService);
+                OrderStatus.CANCELLED);
     }
 }
