@@ -1,11 +1,33 @@
 # (D)ependency Inversion 
 
-#### Goal
- Decouple software modules.
+## Advantages
+- Flexible and reusable code
+- Decoupled modules 
+- Easy testing
 
-#### Principle states
-- _**High-level**_ modules should not depend on _**low-level**_ modules. Both should depend on _**abstractions**_ 
-- _**Abstractions**_ should not depend on _**concrete implementations**_. _**Concrete implementations**_ should depend on _**abstractions**_.
+##Rules
+- Don’t refer to volatile concrete classes. Refer to abstract interfaces instead.
+- Don’t derive from volatile concrete classes.
+
+----
+
+**Volatile** = code that frequently changes.
+
+**Stable** = code that almost never changes.
+
+---
+## How can i write a SW without concretions?
+Obviusly we need concretions but:
+- Refer to **concrete implementation** only if it is **stable**.
+- Refer to **abstraction** where you have a **volatile** code.    
+
+<div class="notebox">EASY IS BETTER<br>DO NOT CREATE ABSTRACTION WHERE IS NOT NEEDED</div>
+
+
+#### Example 
+- **String** class is **Stable**
+- **DatabaseConnector** class is **Volatile**
+
 
 ---
 
