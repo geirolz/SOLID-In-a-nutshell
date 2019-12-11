@@ -11,7 +11,7 @@ source code of the modules.
 
 **Abstraction is the key to the OCP**
 
---- 
+---
 
 ## A typical example:
 
