@@ -1,4 +1,4 @@
-package com.github.geirolz.solid.ocp.solution;
+package com.github.geirolz.solid.ocp.solution.dynamic;
 
 import java.math.BigDecimal;
 
