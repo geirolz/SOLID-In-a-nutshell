@@ -149,6 +149,8 @@ public class LogOn<GenericModem extends Modem> {
     change working code, you aren’t likely to break it."
 </div>
 
+---
+
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
 - **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
