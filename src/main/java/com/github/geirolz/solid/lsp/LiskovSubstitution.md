@@ -75,8 +75,6 @@ class Point {
 
 ---
 
-# Ellipse class
-
 ```java
 
 class Ellipse {
