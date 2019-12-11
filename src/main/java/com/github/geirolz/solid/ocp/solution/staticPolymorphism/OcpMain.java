@@ -3,7 +3,7 @@ package com.github.geirolz.solid.ocp.solution.staticPolymorphism;
 
 import java.math.BigDecimal;
 
-public class ItemPriceMain {
+public class OcpMain {
 
     public static void main(String[] args) {
 

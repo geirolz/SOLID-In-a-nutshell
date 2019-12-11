@@ -2,7 +2,7 @@ package com.github.geirolz.solid.ocp.exercise;
 
 import java.math.BigDecimal;
 
-public class ItemPriceMain {
+public class OcpMain {
 
     public static void main(String[] args) throws Exception {
 

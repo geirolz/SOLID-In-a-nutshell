@@ -151,8 +151,9 @@ public class LogOn<GenericModem extends Modem> {
 
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
-- **Refactor** `com.github.geirolz.solid.srp.exercise.ItemPrice` in order to respect the OCP.
-- **Execute** the `com.github.geirolz.solid.srp.exercise.SrpMain` class to check the outputs.
+- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
+- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting static polymorphism.
+- **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.
 
 #### Hints
-- _Remember the key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**_
+- _Remember the key-rule: **Abstraction is the key of OCP**_
