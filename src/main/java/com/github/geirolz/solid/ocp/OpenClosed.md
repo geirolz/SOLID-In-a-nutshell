@@ -11,11 +11,9 @@ source code of the modules.
 
 **Abstraction is the key to the OCP**
 
----
+--- 
 
-## Dynamic Polymorphism 
-
-### A typical example:
+## A typical example:
 
 ```java
         enum Type {
@@ -57,7 +55,8 @@ This class violates the OCP because:
 
 ---
 
-### SOLUTION
+## SOLUTION
+## Dynamic Polymorphism
 
 We have to be able to make the LogOn function depends only upon the Modem interface. Additional modems will not cause the LogOn function to change. Thus, we have created a module that can be extended, with new
 modems, without requiring modification.
@@ -86,7 +85,7 @@ public class LogOn {
 
 ---
 
-### An example of Modem implementation
+## An example of Modem implementation
 
 ```java
 public class Modem1 implements Modem {
@@ -135,6 +134,7 @@ public class LogOn<GenericModem extends Modem> {
     }
 }
 ```
+---
 
 ## Architectural Goals of OCP
 
