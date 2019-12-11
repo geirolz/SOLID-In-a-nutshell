@@ -1,13 +1,16 @@
-package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
+package com.github.geirolz.solid.ocp.solution.staticPolymorphism;
+
 
 import java.math.BigDecimal;
 
 public class ItemPriceApp {
 
-    public static void main(String args[]) {
-        BigDecimal jeansPrice = ItemPrice.calculate(new JeansPriceCalculator());
-        BigDecimal shoesPrice = ItemPrice.calculate(new ShoesPriceCalculator());
-        
+    public static void main(String[] args) {
+
+        ItemPrice<JeansPriceCalculator> jeansPriceCalculator = new ItemPrice<JeansPriceCalculator>(new JeansPriceCalculator());
+        ItemPrice<ShoesPriceCalculator> shoesPriceCalculator = new ItemPrice<ShoesPriceCalculator>(new ShoesPriceCalculator());
+        BigDecimal jeansPrice = jeansPriceCalculator.calculate();
+        BigDecimal shoesPrice = shoesPriceCalculator.calculate();
         System.out.println("Jeans Price is: " + jeansPrice + "€");
         System.out.println("Shoes Price is: " + shoesPrice + "€");
     }

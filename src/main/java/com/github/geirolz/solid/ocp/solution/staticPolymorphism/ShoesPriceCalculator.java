@@ -2,8 +2,8 @@ package com.github.geirolz.solid.ocp.solution.staticPolymorphism;
 
 import java.math.BigDecimal;
 
-public class JeansPriceCalculator implements ItemPriceCalculator {
+public class ShoesPriceCalculator implements ItemPriceCalculator {
     public BigDecimal computePrice() {
-        return new BigDecimal(10);
+        return new BigDecimal(100);
     }
 }

@@ -46,6 +46,7 @@ source code of the modules.
 ```
 
 ---
+## PROBLEMS
 
 This class violates the OCP because:
 * Every time anything needs to be done to the modem, a switch statement if/else chain will
@@ -107,6 +108,8 @@ public class Modem1 implements Modem {
     }
 }
 ```
+
+Try yourself to add another Modem implementation! The LogOn code will not change!
 
 ---
 

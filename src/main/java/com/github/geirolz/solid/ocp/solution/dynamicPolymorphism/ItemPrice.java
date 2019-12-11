@@ -1,10 +1,10 @@
-package com.github.geirolz.solid.ocp.solution.dynamic;
+package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
 
 import java.math.BigDecimal;
 
-public class ItemPrice {
+class ItemPrice {
 
-    public BigDecimal calculate(ItemPriceCalculator item) {
-        return item.calculatePrice();
+    static BigDecimal calculate(ItemPriceCalculator itemPriceCalculator) {
+        return itemPriceCalculator.computePrice();
     }
 }

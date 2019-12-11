@@ -1,7 +1,7 @@
-package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
+package com.github.geirolz.solid.ocp.solution.staticPolymorphism;
 
 import java.math.BigDecimal;
 
 public interface ItemPriceCalculator {
-    public BigDecimal calculatePrice();
+    BigDecimal computePrice();
 }
