@@ -17,6 +17,8 @@ Let's do an example!
 
 ---
 
+## Implementing the definition
+
 ```java
 
 class Base {
@@ -38,6 +40,8 @@ class User {
 
 ```
 
+It's seems even obvious or easy...but...
+
 ---
 
 ## TO BE MORE PRACTICAL
@@ -56,14 +60,6 @@ class Circle extends Ellipse {
     
 }
 
-```
-
----
-
-# Ellipse class
-
-```java
-
 class Point {
     
     Int x;
@@ -74,6 +70,14 @@ class Point {
         this.y = y;
     }
 }
+
+```
+
+---
+
+# Ellipse class
+
+```java
 
 class Ellipse {
     
