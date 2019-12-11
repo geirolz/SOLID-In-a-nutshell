@@ -95,19 +95,15 @@ class Ellipse {
         this.focusA = a;
         this.focusB = b;
     }
-    
     void setMajorAxisLength(Double majorAxisLength) {
         this.majorAxisLength = majorAxisLength;
     }
-    
     Point getFocusA() {
         return focusA;
     }
-    
     Point getFocusB() {
         return focusB;
     }
-    
     Double getMajorAxisLength() {
         return majorAxisLength;
     }
