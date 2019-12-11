@@ -2,7 +2,7 @@ package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
 
 import java.math.BigDecimal;
 
-public class ItemPriceApp {
+public class ItemPriceMain {
 
     public static void main(String[] args) {
         BigDecimal jeansPrice = ItemPrice.calculate(new JeansPriceCalculator());

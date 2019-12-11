@@ -149,3 +149,10 @@ public class LogOn<GenericModem extends Modem> {
     change working code, you aren’t likely to break it."
 </div>
 
+## Exercise
+Look at `com.github.geirolz.solid.ocp.exercise` package and then:
+- **Refactor** `com.github.geirolz.solid.srp.exercise.ItemPrice` in order to respect the OCP.
+- **Execute** the `com.github.geirolz.solid.srp.exercise.SrpMain` class to check the outputs.
+
+#### Hints
+- _Remember the key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**_
