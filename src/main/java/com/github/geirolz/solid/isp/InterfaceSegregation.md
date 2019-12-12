@@ -41,7 +41,20 @@ In this way clients:
 ---
 ## Problem #1 - Example
 
-TEST
+```java
+class Calculator{
+    public Double sum(Double v1, Double v2){...}
+    public Double multiply(Double v1, Double times){...}
+}
+
+class SumInteger{
+    private final Serializer service;
+    public Document sumInt(){
+        return service.toXml(this.value);
+    }   
+}
+
+```
 
 ---
 ## Problem #2
@@ -59,9 +72,9 @@ In a lot of cases this problem is evident where instead of method implementation
 <img style="width: 90%" class="centered" src="src/main/resources/imgs/InterfaceSegregation_problem_2_solution.svg"/>
 
 ---
-### Problem #2 - Example
-- A **person** can both **work** and **eat**.
-- A **robot** can **work** but it can't **eat**. 
+## Problem #2 - Example
+- `Person` can both **work** and **eat**.
+- `Robot` can **work** but it can't **eat**. 
 
 ```java
     interface Worker{
@@ -69,7 +82,7 @@ In a lot of cases this problem is evident where instead of method implementation
         void eat();    
     }   
 
-    class LazyPerson implements Worker{
+    class Person implements Worker{
         public int workHours(){ return 0; }
         public void eat(){ 
             System.out.println("I'm eating."); 
@@ -84,10 +97,9 @@ In a lot of cases this problem is evident where instead of method implementation
     }  
 ```
 ---
-### Problem #2 - Example Solution
-- `Worker` has been split into: `Worker` and `Eater`.
-- `Person` still have `workHours()` and `eat()` methods because it both implements `Worker` and `Eater`.
-- `Robot` still implements just `Worker` therefore it lose `eat()` method.
+## Problem #2 - Example Solution
+- `Person` both implements `Worker` and `Eater`.
+- `Robot` implements just `Worker` losing `eat()` method.
 
 ```java
     interface Worker {
@@ -114,7 +126,7 @@ In a lot of cases this problem is evident where instead of method implementation
 ---
 ## Exercise
 Look at `com.github.geirolz.solid.isp.exercise` package and then:
-- **Refactor** `com.github.geirolz.solid.isp.exercise.PaymentService` in order to respect the ISP.
+- **Refactor** `PaymentService` in order to respect the ISP.
 
 #### Hints
 - _Fine-grained interfaces_
