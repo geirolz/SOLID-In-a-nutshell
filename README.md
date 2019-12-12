@@ -1,6 +1,5 @@
-# SOLID
- 
-## A true story - by Robert C. Martin:
+# SOLID Principles 
+## A true story - by Robert C. Martin
 The design of many software applications begins as a vital image in the minds of its designers.
  
 At this stage it is **clean, elegant, and compelling**.
@@ -12,8 +11,7 @@ It has a simple beauty that makes the designers and implementers **itch to see i
 </div>
 
 ---
-
-## A (sad) true story - by Robert C. Martin:
+## A (sad) true story - by Robert C. Martin
 But then something begins to happen.
 
 The software starts to rot.
@@ -25,9 +23,7 @@ At first it isn’t so bad. An ugly wart here, a clumsy hack there, but the beau
 </div>
 
 ---
-
-## A (very sad) true story - by Robert C. Martin:
-
+## A (very sad) true story - by Robert C. Martin
 The program becomes a festering mass of code that the developers find increasingly hard to maintain.
 
 Eventually the sheer effort required to make even the simplest of changes to the application becomes so high that the 
@@ -42,7 +38,6 @@ designers are already crying for another redesign.
 </div>
  
 ---
-
 ## Symptoms of Rotting Design:
 The immediate cause of the degradation of the design is well understood. 
 The requirements have been changing in ways that the initial design did not anticipate. 
@@ -62,8 +57,7 @@ times are very long, engineers will be tempted to make changes that don’t forc
 changes are not optimal from a design point of view.
 
 ---
-
-## Useful design principles:
+## Useful design principles
 * The theory of SOLID principles was introduced by Robert C. Martin in his 2000 paper **'Design Principles and Design Patterns'** 
 * **S.O.L.I.D. acronym** was introduced later (in 2004) by Michael Feathers.
 
@@ -73,7 +67,7 @@ The goal of the principles is the creation of software structures that:
 * Basis of components that can be used in many software systems.
 
 ---
-## SOLID PRINCIPLES
+## SOLID Principles
 - [(S)ingle Responsibility](src/main/java/com/github/geirolz/solid/srp/SingleResponsibility.md)
 - [(O)pen/Closed](src/main/java/com/github/geirolz/solid/ocp/OpenClosed.md)
 - [(L)iskov Substitution](src/main/java/com/github/geirolz/solid/lsp/LiskovSubstitution.md)
