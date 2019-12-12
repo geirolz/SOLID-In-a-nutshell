@@ -2,9 +2,8 @@
 
 **Conway's law:**
 
-> *organizations which design systems are constrained to produce designs which are copies of the communication 
-structures of these organizations.
-— M. Conway*
+> *Organizations which design systems are constrained to produce designs which are copies of the communication 
+structures of these organizations. — M. Conway*
 
 A corollary to Conway’s law: the best structure for a software system is heavily influenced by the 
 social structure of the **organization that uses it** so that each software **module** has one, and only one, 
@@ -14,7 +13,7 @@ reason to change.
 * module: the simplest definition is just a source file, or, more generally, a cohesive set of functions and data structures.
 
 ---
-## A typical example:
+## Example
 
 ```java
     class Employee {
@@ -30,7 +29,6 @@ This class violates the SRP because those three methods are responsible to three
 * The `save()` method is specified by the database administrators (DBAs), who report to the CTO.
 
 ---
-
 ## SYMPTOM 1: ACCIDENTAL DUPLICATION
 
 ```java
@@ -54,7 +52,6 @@ the `reportHours()` function?
 * the COO’s team doesn’t know that this is happening....
 
 ---
-
 ## SYMPTOM 2: MERGES
 
 Suppose that:
@@ -70,8 +67,7 @@ Unfortunately their changes collide. The result is a merge (*a risky affair*).
 </div>
 
 ---
-
-## SOLUTION
+## Solution
 
 Key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**
 
@@ -102,12 +98,12 @@ Key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**
         public void save(EmployeeData employeeData) { ... }
     }
 ```
----
 
+---
 ## Exercise
 Look at `com.github.geirolz.solid.srp.exercise` package and then:
 - **Refactor** `com.github.geirolz.solid.srp.exercise.Order` in order to respect the SRP.
 - **Execute** the `com.github.geirolz.solid.srp.exercise.SrpMain` class to check the outputs.
 
 #### Hints
-- _Remember the key-rule: **SEPARATE THE DATA FROM THE FUNCTIONS**_
+- Separate the data from the functions

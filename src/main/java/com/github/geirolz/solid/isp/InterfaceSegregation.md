@@ -3,15 +3,11 @@
 If you have a **class that has several clients**, rather than loading the class with all the methods that the clients need, 
 **create specific interfaces for each client**.
 
-<p class="notebox">
-"Make fine grained interfaces that are client specific."
-</p>
-<p class="notebox">
-    “Many client specific interfaces are better than one general purpose interface.”
-</p>
-<p class="notebox">
-    “Clients should not be forced to depend upon interfaces that they do not use.”
-</p>
+> *"Make fine grained interfaces that are client specific."*
+
+> *“Many client specific interfaces are better than one general purpose interface.”*
+
+> *“Clients should not be forced to depend upon interfaces that they do not use.”*
 
 ## Advantages
 - **Compilation** - clients depends on interfaces, in case implementation has changes you don't need to recompile all clients also.

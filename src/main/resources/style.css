@@ -107,14 +107,18 @@ code {
     padding-top: 1em;
 }
 
-.notebox {
-    padding: 3px;
+blockquote {
+    padding: 5px;
+    display: block;
     font-style: italic;
-    background-color: rgba(255, 255, 204, 0.79);
     text-align: center;
-    /*border-left: 6px solid rgba(255, 234, 63, 0.6);*/
+    background-color: rgba(255, 234, 63, 0.2);
+    border-left: 6px solid rgba(255, 234, 63, 0.7);
 }
 
+blockquote > p {
+    margin: 0;
+}
 .centered {
   text-align: center;
   display: block;

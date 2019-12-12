@@ -4,16 +4,12 @@ We should write our modules so that they can be **extended**, **without modifyin
 words, we want to be able to change what the modules do, without changing the
 source code of the modules.
 
-
-<div class="notebox">
-    "A module should be open for extension but closed for modification."
-</div>
+> *A module should be open for extension but closed for modification.*
 
 **Abstraction is the key to the OCP**
 
 ---
-
-## A typical example:
+## Example
 
 ```java
         enum Type {
@@ -34,7 +30,7 @@ source code of the modules.
 ```
 
 ---
-## PROBLEMS
+## Problems
 
 This class violates the OCP because:
 * Every time anything needs to be done to the modem, a switch statement if/else chain will
@@ -43,10 +39,7 @@ This class violates the OCP because:
   must be appropriately modified.
 
 ---
-
-## SOLUTION
-## Dynamic Polymorphism
-
+## Solution - Dynamic Polymorphism
 We have to be able to make the LogOn function depends only upon the Modem interface. Additional modems will not cause the LogOn function to change. Thus, we have created a module that can be extended, with new
 modems, without requiring modification.
 
@@ -69,11 +62,10 @@ public class LogOn {
 }
 ```
 
-* LogOn has been closed for modification because we don't need to modify the class if a Modem functionality changes or if a new Modem is added.
-* LogOn has been opened for extension because if we want to change the behaviour of a Modem we only have to inject it in the logOn method without modifying his implementation.
+- LogOn has been closed for modification because we don't need to modify the class if a Modem functionality changes or if a new Modem is added.
+- LogOn has been opened for extension because if we want to change the behaviour of a Modem we only have to inject it in the logOn method without modifying his implementation.
 
 ---
-
 ## An example of Modem implementation
 
 ```java
@@ -100,11 +92,8 @@ public class Modem1 implements Modem {
 Try yourself to add another Modem implementation! The LogOn code will not change!
 
 ---
-
-## Static Polymorphism 
-
+## Solution - Static Polymorphism 
 The LogOn function can be extended with many different types of modems without requiring modification thanks to the Generic Parameter.
-
 
 ```java
 
@@ -125,20 +114,17 @@ public class LogOn<GenericModem extends Modem> {
     }
 }
 ```
----
 
+---
 ## Architectural Goals of OCP
 
 * We can create modules that are extensible, without being changed
 * We can add new features to existing code, without changing the existing code and by only adding new code
 
-<div class="notebox">
- "It is always better if changes do not propogate into existing code that already works. If you don’t have to
-    change working code, you aren’t likely to break it."
-</div>
+> *It is always better if changes do not propogate into existing code that already works.
+> If you don’t have to change working code, you aren’t likely to break it.*
 
 ---
-
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
 - **Add a new `TShirtPriceCalculator`** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in the rough way.
@@ -147,4 +133,4 @@ Look at `com.github.geirolz.solid.ocp.exercise` package and then:
 - **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.
 
 #### Hints
-- _Remember the key-rule: **Abstraction is the key of OCP**_
+- Abstraction is the key of OCP

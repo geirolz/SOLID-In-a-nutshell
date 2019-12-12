@@ -1,8 +1,5 @@
 # (D)ependency Inversion 
-
-<p class="notebox">
-    "Depend on abstractions, not on concretions."
-</p>
+> *Depend on abstractions, not on concretions.*
 
 ### Goal
 Decouple software modules
@@ -19,9 +16,7 @@ Decouple software modules
 ---
 ## Don't abuse of DIP
 
-<p class="notebox">
-    "Simpler is better"
-</p>
+> *Simpler is better*
 
 We need to depends on abstraction, right! But with moderation:
 - Depend on **abstraction** in case of a **volatile** class.
