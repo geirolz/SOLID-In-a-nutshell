@@ -35,24 +35,6 @@ In this way clients:
 <img style="width: 45%" class="centered" src="src/main/resources/imgs/InterfaceSegregation_problem_1_solution.svg"/>
 
 ---
-## Problem #1 - Example
-
-```java
-class Calculator{
-    public Double sum(Double v1, Double v2){...}
-    public Double multiply(Double v1, Double times){...}
-}
-
-class SumInteger{
-    private final Serializer service;
-    public Document sumInt(){
-        return service.toXml(this.value);
-    }   
-}
-
-```
-
----
 ## Problem #2 - Subtypes
 Fat interface defines a lot of methods **BUT** some implementations of this interface don't need some method.
 
