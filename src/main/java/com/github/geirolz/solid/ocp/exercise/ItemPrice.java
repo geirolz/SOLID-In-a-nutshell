@@ -4,27 +4,39 @@ import java.math.BigDecimal;
 
 class ItemPrice {
 
-    static BigDecimal calculate(ItemPriceCalculator item) throws Exception {
-        if (item instanceof ShoesPriceCalculator) {
-            return ((ShoesPriceCalculator) item).getPriceForShoes();
-        } else if(item instanceof JeansPriceCalculator){
-            return ((JeansPriceCalculator) item).getPriceForJeans();
-        } else throw new Exception("Unhandled ItemPriceCalculator!!!");
+    enum ItemType {
+        SHOES, JEANS
     }
 
-    static class ShoesPriceCalculator extends ItemPriceCalculator {
+    interface ItemPriceCalculator {
+        ItemType getItemType();
+    }
+
+    static class ShoesPriceCalculator implements ItemPriceCalculator {
         BigDecimal getPriceForShoes() {
             return new BigDecimal(100);
         }
-    }
 
-    static class JeansPriceCalculator extends ItemPriceCalculator {
-        BigDecimal getPriceForJeans() {
-            return new BigDecimal(10);
+        public ItemType getItemType() {
+            return ItemType.SHOES;
         }
     }
 
-    static class ItemPriceCalculator {
+    static class JeansPriceCalculator implements ItemPriceCalculator {
+        BigDecimal getPriceForJeans() {
+            return new BigDecimal(10);
+        }
 
+        public ItemType getItemType() {
+            return ItemType.JEANS;
+        }
+    }
+
+    static BigDecimal calculate(ItemPriceCalculator calculator) throws Exception {
+        if (calculator.getItemType() == ItemType.SHOES) {
+            return ((ShoesPriceCalculator) calculator).getPriceForShoes();
+        } else if (calculator.getItemType() == ItemType.JEANS) {
+            return ((JeansPriceCalculator) calculator).getPriceForJeans();
+        } else throw new Exception("Unhandled ItemPriceCalculator!!!");
     }
 }

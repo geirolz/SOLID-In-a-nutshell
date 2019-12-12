@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 class ItemPrice<GenericItemPriceCalculator extends ItemPriceCalculator> {
 
-    private GenericItemPriceCalculator genericItemPriceCalculator;
+    private final GenericItemPriceCalculator genericItemPriceCalculator;
 
     BigDecimal calculate() {
         return genericItemPriceCalculator.computePrice();

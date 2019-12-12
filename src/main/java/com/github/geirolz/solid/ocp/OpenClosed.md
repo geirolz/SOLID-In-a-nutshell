@@ -20,28 +20,16 @@ source code of the modules.
             Modem1, Modem2
         }
     
-        abstract class Modem {
-    
-            Type type;
+        interface Modem {
+            Type getType();
         }
     
         public class Modem1 extends Modem {
-    
             Type type;
         }
     
         public class Modem2 extends Modem {
-    
             Type type;
-        }
-    
-        public void logOn(Modem m, String user, String pass) {
-    
-            if (m.type == Type.Modem1)
-                dialModem1((Modem1) m);
-            else if (m.type == Type.Modem2)
-                dialModem2((Modem2) m);
-            // ...you get the idea
         }
 ```
 
@@ -153,8 +141,9 @@ public class LogOn<GenericModem extends Modem> {
 
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
-- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
-- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting static polymorphism.
+- **Add a new `TShirtPriceCalculator`** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in the rough way.
+- **Refactor** `ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
+- **Refactor** `ItemPrice` in order to respect the OCP adopting static polymorphism.
 - **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.
 
 #### Hints

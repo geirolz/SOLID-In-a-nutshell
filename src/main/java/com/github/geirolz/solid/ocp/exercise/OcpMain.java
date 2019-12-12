@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class OcpMain {
 
     public static void main(String[] args) throws Exception {
-
         BigDecimal jeansPrice = ItemPrice.calculate(new ItemPrice.JeansPriceCalculator());
         BigDecimal shoesPrice = ItemPrice.calculate(new ItemPrice.ShoesPriceCalculator());
 
