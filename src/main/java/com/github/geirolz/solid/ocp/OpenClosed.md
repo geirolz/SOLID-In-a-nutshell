@@ -125,7 +125,7 @@ public class LogOn<GenericModem extends Modem> {
 ---
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
-- **Add a new `TShirtPriceCalculator`** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in the rough way.
+- **Add a new `TShirtPriceCalculator`** in `ItemPrice` in the rough way.
 - **Refactor** `ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
 - **Refactor** `ItemPrice` in order to respect the OCP adopting static polymorphism.
 - **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.
