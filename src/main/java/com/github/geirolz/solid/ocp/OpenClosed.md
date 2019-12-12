@@ -47,16 +47,14 @@ Thus, we have created a module that can be extended, with new modems, without re
 public class LogOn {
 
     public void logOn(Modem modem, String pno) {
+
         modem.dial(pno);
     }
-
     public interface Modem {
+
         void dial(String pno);
-
         void send(String toSend);
-
         String receive();
-
         void hangup();
     }
 }
@@ -89,7 +87,7 @@ public class Modem1 implements Modem {
 }
 ```
 
-Try yourself to add another Modem implementation! The `LogOn` code will not change!
+Try to think about another Modem implementation! The `LogOn` code will not change!
 
 ---
 ## Example solution - Static Polymorphism 
