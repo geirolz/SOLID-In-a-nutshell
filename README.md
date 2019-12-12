@@ -1,5 +1,8 @@
-# SOLID
- 
+class: center, middle
+# SOLID Principles
+
+---
+
 ## A true story - by Robert C. Martin:
 The design of many software applications begins as a vital image in the minds of its designers.
  
