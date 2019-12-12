@@ -1,6 +1,5 @@
 package com.github.geirolz.solid.isp.exercise;
 
-public interface PaymentService {
+public interface VirtualPaymentService {
     void virtualPay(Double value);
-    void cardPay(Double value);
 }

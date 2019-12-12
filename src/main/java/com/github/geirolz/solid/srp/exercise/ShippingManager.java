@@ -1,4 +1,4 @@
-package com.github.geirolz.solid.srp.solution;
+package com.github.geirolz.solid.srp.exercise;
 
 public class ShippingManager {
     private final ShippingService shippingService;

@@ -1,4 +1,4 @@
-package com.github.geirolz.solid.ocp.solution.staticPolymorphism;
+package com.github.geirolz.solid.ocp.exercise.staticPolymorphism;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
+package com.github.geirolz.solid.ocp.exercise.dynamicPolymorphism;
 
 import java.math.BigDecimal;
 
