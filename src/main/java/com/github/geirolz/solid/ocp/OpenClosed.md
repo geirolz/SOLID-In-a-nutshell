@@ -11,7 +11,7 @@ source code of the modules.
 
 **Abstraction is the key to the OCP**
 
---- 
+---
 
 ## A typical example:
 
@@ -46,6 +46,7 @@ source code of the modules.
 ```
 
 ---
+## PROBLEMS
 
 This class violates the OCP because:
 * Every time anything needs to be done to the modem, a switch statement if/else chain will
@@ -108,6 +109,8 @@ public class Modem1 implements Modem {
 }
 ```
 
+Try yourself to add another Modem implementation! The LogOn code will not change!
+
 ---
 
 ## Static Polymorphism 
@@ -146,3 +149,13 @@ public class LogOn<GenericModem extends Modem> {
     change working code, you aren’t likely to break it."
 </div>
 
+---
+
+## Exercise
+Look at `com.github.geirolz.solid.ocp.exercise` package and then:
+- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
+- **Refactor** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in order to respect the OCP adopting static polymorphism.
+- **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.
+
+#### Hints
+- _Remember the key-rule: **Abstraction is the key of OCP**_

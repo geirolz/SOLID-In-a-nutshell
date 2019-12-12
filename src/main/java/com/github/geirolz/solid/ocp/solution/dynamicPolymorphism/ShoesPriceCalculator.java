@@ -1,9 +1,9 @@
-package com.github.geirolz.solid.ocp.solution.dynamic;
+package com.github.geirolz.solid.ocp.solution.dynamicPolymorphism;
 
 import java.math.BigDecimal;
 
 public class ShoesPriceCalculator implements ItemPriceCalculator {
-    public BigDecimal calculatePrice() {
+    public BigDecimal computePrice() {
         return new BigDecimal(100);
     }
 }
