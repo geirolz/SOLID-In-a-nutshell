@@ -6,42 +6,42 @@ source code of the modules.
 
 > *A module should be open for extension but closed for modification.*
 
-**Abstraction is the key to the OCP**
+<p class="centered"><b>Abstraction is the key to the OCP</b></p>
 
 ---
 ## Example
-
-```java
-        enum Type {
-            Modem1, Modem2
-        }
-    
-        interface Modem {
-            Type getType();
-        }
-    
-        public class Modem1 extends Modem {
-            Type type;
-        }
-    
-        public class Modem2 extends Modem {
-            Type type;
-        }
-```
-
----
-## Problems
-
 This class violates the OCP because:
 * Every time anything needs to be done to the modem, a switch statement if/else chain will
   need to select the proper functions to use.
 * When new modems are added, or modem policy changes, the code must be scanned for all these selection statements, and each
-  must be appropriately modified.
+  must be appropriately modified. 
+  
+```java
+        enum Type { Modem1, Modem2 }
+    
+        interface Modem { Type getType(); }
+
+        public class Modem1 implements Modem {
+            public Type getType(){ return Type.Modem1; }
+        }
+        public class Modem2 implements Modem {
+             public Type getType(){ return Type.Modem2; }
+        }
+
+        public void logOn(Modem m, String user, String pass) {
+            if (m.getType() == Type.Modem1)
+                dialModem1((Modem1) m);
+            else if (m.getType() == Type.Modem2)
+                dialModem2((Modem2) m);
+            // ...you get the idea
+        }
+```
 
 ---
-## Solution - Dynamic Polymorphism
-We have to be able to make the LogOn function depends only upon the Modem interface. Additional modems will not cause the LogOn function to change. Thus, we have created a module that can be extended, with new
-modems, without requiring modification.
+## Example solution - Dynamic Polymorphism
+We have to be able to make the `LogOn` function depends only upon the `Modem` interface. 
+Additional modems will not cause the `LogOn` function to change. 
+Thus, we have created a module that can be extended, with new modems, without requiring modification.
 
 ```java
 public class LogOn {
@@ -62,8 +62,8 @@ public class LogOn {
 }
 ```
 
-- LogOn has been closed for modification because we don't need to modify the class if a Modem functionality changes or if a new Modem is added.
-- LogOn has been opened for extension because if we want to change the behaviour of a Modem we only have to inject it in the logOn method without modifying his implementation.
+- `LogOn` has been closed for modification because we don't need to modify the class if a `Modem` functionality changes or if a new `Modem` is added.
+- `LogOn` has been opened for extension because if we want to change the behaviour of a `Modem` we only have to inject it in the `logOn` method without modifying his implementation.
 
 ---
 ## An example of Modem implementation
@@ -89,10 +89,10 @@ public class Modem1 implements Modem {
 }
 ```
 
-Try yourself to add another Modem implementation! The LogOn code will not change!
+Try yourself to add another Modem implementation! The `LogOn` code will not change!
 
 ---
-## Solution - Static Polymorphism 
+## Example solution - Static Polymorphism 
 The LogOn function can be extended with many different types of modems without requiring modification thanks to the Generic Parameter.
 
 ```java

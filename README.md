@@ -1,4 +1,8 @@
-# SOLID Principles 
+class: center, middle
+# SOLID Principles
+
+---
+
 ## A true story - by Robert C. Martin
 The design of many software applications begins as a vital image in the minds of its designers.
  
@@ -31,8 +35,7 @@ engineers and front line managers cry for a **redesign project**. Such redesigns
  
 Though the designers start out with good intentions, they find that **they are shooting at a moving target**. 
 The old system continues to evolve and change, and the new design must keep up.
-On that fateful day, usually much later than planned, the morass of problems in the new design may be so bad that the 
-designers are already crying for another redesign.
+
 <div class="centered">
     <img src="https://media.giphy.com/media/L2iazgzya38bK/source.gif" alt="Ok, goodbye ..." />
 </div>
@@ -50,9 +53,8 @@ The Symptoms of Rotting Design are:
 * **Immobility**: the inability to reuse software from other projects or from parts of the same project.
 * **Viscosity**: 
     - *viscosity of the design*: when faced with a change, engineers usually find more than one way to make the change. 
-When the design preserving methods are harder to employ than the hacks, then the viscosity of the design is high. 
 It is easy to do the wrong thing, but hard to do the right thing.
-    - *viscosity of the environment*:  when the development environment is slow and inefficient. For example, if compile 
+    - *viscosity of the environment*: when the development environment is slow and inefficient. For example, if compile 
 times are very long, engineers will be tempted to make changes that don’t force large recompiles, even though those
 changes are not optimal from a design point of view.
 
@@ -66,8 +68,7 @@ The goal of the principles is the creation of software structures that:
 * Easy to understand
 * Basis of components that can be used in many software systems.
 
----
-## SOLID Principles
+### SOLID Principles
 - [(S)ingle Responsibility](src/main/java/com/github/geirolz/solid/srp/SingleResponsibility.md)
 - [(O)pen/Closed](src/main/java/com/github/geirolz/solid/ocp/OpenClosed.md)
 - [(L)iskov Substitution](src/main/java/com/github/geirolz/solid/lsp/LiskovSubstitution.md)

@@ -42,7 +42,8 @@ This class violates the SRP because those three methods are responsible to three
 ```
 Private method `regularHours()` calculates non-overtime hours and it's shared by `calculatePay()` and `reportHours()`.
 
-*New requirement*: the CFO’s team decides that the way non-overtime hours are calculated needs to be tweaked.
+#### New requirement
+The CFO’s team decides that the way non-overtime hours are calculated needs to be tweaked.
 In contrast, the COO’s team in HR does not want that particular tweak because they use non-overtime hours for a 
 different purpose.
 
