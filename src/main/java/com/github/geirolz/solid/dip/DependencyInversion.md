@@ -86,13 +86,3 @@ Now `PlcMachine` depends on abstract `AlarmRaiser` and we can inject the instanc
 ```
 
 _This solution is known as **Dependency Injection**_
-
-
----
-## Exercise
-Look at `com.github.geirolz.solid.dip.exercise` package and then:
-- **Refactor** `com.github.geirolz.solid.dip.exercise.PaymentService` in order to respect the DIP.
-
-#### Hints
-- TODO
-
