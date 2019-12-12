@@ -47,16 +47,14 @@ Thus, we have created a module that can be extended, with new modems, without re
 public class LogOn {
 
     public void logOn(Modem modem, String pno) {
+
         modem.dial(pno);
     }
-
     public interface Modem {
+
         void dial(String pno);
-
         void send(String toSend);
-
         String receive();
-
         void hangup();
     }
 }
@@ -89,7 +87,7 @@ public class Modem1 implements Modem {
 }
 ```
 
-Try yourself to add another Modem implementation! The `LogOn` code will not change!
+Try to think about another Modem implementation! The `LogOn` code will not change!
 
 ---
 ## Example solution - Static Polymorphism 
@@ -127,7 +125,7 @@ public class LogOn<GenericModem extends Modem> {
 ---
 ## Exercise
 Look at `com.github.geirolz.solid.ocp.exercise` package and then:
-- **Add a new `TShirtPriceCalculator`** `com.github.geirolz.solid.ocp.exercise.ItemPrice` in the rough way.
+- **Add a new `TShirtPriceCalculator`** in `ItemPrice` in the rough way.
 - **Refactor** `ItemPrice` in order to respect the OCP adopting dynamic polymorphism.
 - **Refactor** `ItemPrice` in order to respect the OCP adopting static polymorphism.
 - **Execute** the `com.github.geirolz.solid.ocp.exercise.OcpMain` class to check the outputs.

@@ -15,7 +15,7 @@ If you have a **class that has several clients**, rather than loading the class 
 - **Low coupling** - better maintainability and scalability
 
 ---
-## Problem #1
+## Problem #1 - Clients
 - `Client A`, `Client B` and `Client C` have a dependency with `Service`.
 - `Service` implements all methods for all clients, therefore all clients can see also the methods that they don't should use.
 - Changes on `Service` class can impact all clients  
@@ -53,7 +53,7 @@ class SumInteger{
 ```
 
 ---
-## Problem #2
+## Problem #2 - Subtypes
 Fat interface defines a lot of methods **BUT** some implementations of this interface don't need some method.
 
 In a lot of cases this problem is evident where instead of method implementation we see throwing an exception. 

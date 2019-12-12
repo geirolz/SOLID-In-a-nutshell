@@ -29,9 +29,10 @@ class User {
     static void doSomethingWithBaseClass(Base base) {
         
     }
-    
-    doSomethingWithBaseClass(new Derived())
 }
+
+User.doSomethingWithBaseClass(new Derived());
+
 ```
 
 It's seems even obvious or easy...but...
@@ -107,7 +108,7 @@ class Circle extends Ellipse {
 
 ```
 
-Certainly the model we have created is self consistent. An instance of Circle will obeys all the rules of a circle. There is nothing you
+**Certainly the model we have created is self consistent.** An instance of Circle will obeys all the rules of a circle. There is nothing you
 can do to it to make it violate those rules. So too for Ellipse. The two classes form
 a nicely consistent model, even if Circle has one too many data elements.
 
@@ -115,12 +116,8 @@ a nicely consistent model, even if Circle has one too many data elements.
 ## Circle and Ellipse do not live alone...
 Circles and Ellipses cohabit in a universe with many other entities and a lot of users can use them to make their logic.
 
-For example...
-
 ```java
-
 class Client {
-
         void prove(Ellipse e) {
             Point f1 = new Point(-1, 1);
             Point f2 = new Point(1,0);
@@ -133,7 +130,6 @@ class Client {
             assert(e.getMajorAxisLength() == majorAxisLength);
         }
     }
-
 ```
 - If we pass an Ellipse instance to our prove method it will respect all the assertions.
 - What happens if we pass a Circle instance? **Hint: remember the implementation of Circle setFoci**
@@ -145,3 +141,5 @@ class Client {
 Unfortunately, LSP violations are difficult to detect until it is too late. 
 In the Circle/Ellipse case, everything worked fine until some client came along and discovered that the implicit contract had been violated.
 
+LSP is a matter of modelling object in the specific domain!
+Try to think if it's really correct to give the chance to set both focusA and focusB in an
