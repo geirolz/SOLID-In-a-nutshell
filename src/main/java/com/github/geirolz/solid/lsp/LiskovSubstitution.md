@@ -142,4 +142,3 @@ Unfortunately, LSP violations are difficult to detect until it is too late.
 In the Circle/Ellipse case, everything worked fine until some client came along and discovered that the implicit contract had been violated.
 
 LSP is a matter of modelling object in the specific domain!
-Try to think if it's really correct to give the chance to set both focusA and focusB in an
