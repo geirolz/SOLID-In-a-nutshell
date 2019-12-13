@@ -28,11 +28,11 @@ This class violates the OCP because:
              public Type getType(){ return Type.Modem2; }
         }
 
-        public void logOn(Modem m, String user, String pass) {
+        public void logOn(Modem m, String pno) {
             if (m.getType() == Type.Modem1)
-                dialModem1((Modem1) m);
+                dialModem1(pno);
             else if (m.getType() == Type.Modem2)
-                dialModem2((Modem2) m);
+                dialModem2(pno);
             // ...you get the idea
         }
 ```
@@ -97,8 +97,8 @@ The LogOn function can be extended with many different types of modems without r
 
 public class LogOn<GenericModem extends Modem> {
 
-    public void logOn(GenericModem modem) {
-        modem.dial("abc");
+    public void logOn(GenericModem modem, String pno) {
+        modem.dial(pno);
     }
 
     public interface Modem {
