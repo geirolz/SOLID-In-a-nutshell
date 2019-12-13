@@ -88,7 +88,7 @@ In a lot of cases this problem is evident where instead of method implementation
         void eat();    
     } 
 
-    class LazyPerson implements Worker, Eater {
+    class Person implements Worker, Eater {
         public int workHours(){ return 0; }
         public void eat(){ 
             System.out.println("I'm eating.");
