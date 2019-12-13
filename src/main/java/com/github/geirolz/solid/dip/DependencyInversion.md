@@ -41,7 +41,7 @@ Introducing `Service` interface `Client` depends on abstraction and the DIP is r
 
 ---
 ## Problem - Example 
-`PlcMachine` depends on concrete `AlarmRaiser`. 
+`PlcMachine` depends on concrete `AlarmNotifier`. 
 
 ```java
     class AlarmNotifier{
